@@ -1,9 +1,8 @@
-
-# Web Scraping Project
+# Web URL Extractor
 
 ## Overview
 
-This Python script is designed to scrape all the URLs from a specific website and save them to a text file. The script uses the `requests` and `BeautifulSoup` libraries to fetch the website content and parse the HTML, respectively.
+This Python project is aimed at extracting URLs from a specified website. It is built with modularity in mind, featuring separate modules for fetching and parsing URLs (`url_extractor.py`) and for utility functions (`utils.py`). The main script (`main.py`) ties everything together.
 
 ## Requirements
 
@@ -11,36 +10,38 @@ This Python script is designed to scrape all the URLs from a specific website an
 - `requests`
 - `BeautifulSoup`
 
-Install the required Python packages using pip:
+To install the required Python packages, run the following command:
 
 ```bash
 pip install requests beautifulsoup4
 ```
 
+## Structure
+
+- `main.py`: The main executable script that uses the `url_extractor` and `utils` modules.
+- `url_extractor.py`: Contains the `fetch_and_parse_url` function for fetching and parsing URLs from a website.
+- `utils.py`: A utility module featuring the `save_urls_to_file` function for saving URLs to a text file.
+
 ## Usage
 
-1. Clone this repository or download the script to your local machine.
-2. Open the script in a text editor and replace `start_url` with the URL of the website you want to scrape. For example, replace it with `https://example.com`.
+1. Clone this repository or download the files to your local machine.
+2. Replace `start_url` in `main.py` with the URL of the website you wish to scrape.
+3. Run `main.py`:
 
-```python
-start_url = 'https://example.com'  # Replace with your website URL
-```
+    ```bash
+    python main.py
+    ```
 
-3. Save the script and run it using Python:
+4. The extracted URLs will be saved in a file named `extracted_urls.txt`.
 
-```bash
-python your_script_name.py
-```
+## Contributing
 
-The script will output the URLs to the console and save them to a text file named `extracted_urls.txt`.
-
-**Note**: The script disables SSL certificate verification by default for debugging purposes. It's not recommended to keep it disabled for production use due to security risks.
-
-## Troubleshooting
-
-The script contains debug prints to help identify issues related to network errors or HTML parsing. If you encounter any issues, the debug information will be printed to the console.
+If you find any bugs or have suggestions for improvements, feel free to open an issue or make a pull request.
 
 ## License
 
 This project is open-source and available under the MIT License.
 
+---
+
+Made with :heart: by [Your Name]
