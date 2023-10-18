@@ -5,7 +5,7 @@ from urllib.parse import urljoin
 
 print("Script started...")
 
-start_url = 'https://website.ru/'  # Replace with your website URL
+start_url = 'https://example.com/'  # Replace with your website URL
 
 try:
     print(f"Sending GET request to {start_url} (SSL verification disabled)...")
